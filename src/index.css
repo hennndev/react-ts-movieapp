@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: #0E2954;
+    --swiper-pagination-color: #EB455F;
+    --swiper-pagination-bullet-inactive-color: white;
+}
+
+
+
+
+
+@layer base {
+    html {
+        @apply bg-[#181818] font-primary
+    }
+}
+
+@layer utilities {
+    .scrollbar-thin {
+        scrollbar-width: thin;
+    }
+    .scrollbar-thin::-webkit-scrollbar {
+        display: block;
+        width: 4px;
+        height: 4px;
+    }
+    
+}
+
+
+@layer components {
+    .container {
+        @apply max-w-[1300px] mx-auto
+    }
+    .flexx {
+        @apply flex items-center
+    }
+    .flex_between {
+        @apply flex items-center justify-between
+    }
+    .flex_center {
+        @apply flex items-center justify-center
+    }
+
+
+    /* sidebar */
+    .sidebar_link {
+        @apply flexx hover:translate-x-1 transition duration-200 ease-in-out cursor-pointer
+    }
+    .sidebar_link_icon {
+        @apply text-xl mr-4 group-hover:text-primary-color
+    }
+    .nav-link {
+        @apply text-[17px] font-medium cursor-pointer hover:scale-[1.02] transition duration-200
+    }
+    .sidebar_sub_title {
+        @apply text-gray-500 text-[13px] font-bold tracking-wide
+    }
+    .sidebar_options {
+        @apply mt-6 text-gray-300 font-medium space-y-6 text-sm
+    }
+
+
+    /* button */
+    .button {
+        @apply rounded-full px-4 py-2 border-none outline-none cursor-pointer text-sm text-white font-medium
+    }
+    .button_hover {
+        @apply hover:scale-[0.90] transition duration-300
+    }
+}
+
