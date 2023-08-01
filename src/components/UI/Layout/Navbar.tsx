@@ -18,7 +18,6 @@ const Navbar = () => {
     const location = useLocation()
     const navigate = useNavigate()
     const queries = queryString.parse(location.search)
-    const query = queries["query"] ? queries["query"] : ""
     const [searchTerm, setSearchTerm] = useState<string>("")
     const { handleSidebar, showSearchModal, handleShowSearchModal } = useData()
 
